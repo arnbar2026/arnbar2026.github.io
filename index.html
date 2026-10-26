@@ -63,7 +63,27 @@
 
   /* --- front-page widening for the video session (front page only) --- */
   .wrap.home{max-width:1040px;}
-  .lede-col{max-width:700px;}
+  .lede-col{min-width:0;}
+
+  /* --- two complementary introductions: institutional context and individual coaching --- */
+  .home-hero{display:grid;grid-template-columns:minmax(0,1fr) 340px;column-gap:52px;align-items:start;}
+  .home-hero .intro{margin:0;}
+  .indexbox.compact{padding:19px 22px;margin:15px 0 0;}
+  .indexbox.compact .eyebrow{margin-bottom:10px;letter-spacing:1.5px;}
+  .indexbox.compact li{font-size:15.5px;line-height:1.43;padding:8px 0;}
+  .indexbox.compact .src{margin-top:10px;font-size:11px;}
+  .coachingbox{background:#FFFDF8;border:1px solid var(--line);border-top:3px solid var(--accent);
+    border-radius:4px;padding:23px 25px 24px;margin-top:52px;}
+  .coachingbox h2{font-size:26px;line-height:1.2;font-weight:600;letter-spacing:.1px;margin:0 0 17px;}
+  .coachingbox p{font-size:16.5px;line-height:1.53;margin:0 0 14px;color:#3b382f;}
+  .coachingbox p:last-child{margin-bottom:0;}
+  .coachingbox .invite{border-top:1px solid var(--line);padding-top:15px;margin-top:17px;}
+  .coachingbox .invite a{font-weight:600;text-decoration:underline;text-underline-offset:3px;}
+  @media(max-width:819px){
+    .home-hero{display:block;}
+    .home-hero .intro{padding-top:36px;}
+    .coachingbox{margin-top:25px;}
+  }
 
   /* --- video session module --- */
   .videos{background:#F4F0E7;border-radius:4px;padding:22px 24px 20px;margin:26px 0;}
@@ -95,21 +115,31 @@
 <header><div class="wrap home masthead">
   <div class="brand"><a href="index.html">Notes from the Room</a>
     <small>Reflections on research communication · Arnold Baruch</small></div>
-  <nav><a href="index.html#essays">Essays</a><a href="research-communications.html">Research Communication Series</a><a href="ids.html">IDS Series</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav>
+  <nav><a href="index.html#essays">Essays</a><a href="osaka.html">The Osaka Series</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav>
 </div></header>
 <div class="wrap home">
-  <div class="lede-col">
-    <p class="intro">Working online with researchers in Japan, helping them make their work understood, I've gathered some notes and observations here.</p>
+  <div class="home-hero">
+    <div class="lede-col">
+      <p class="intro">Working online with researchers in Japan, helping them make their work understood, I've gathered some notes and observations here.</p>
 
-    <div class="indexbox">
-      <p class="eyebrow">The world your students are entering</p>
-      <ul>
-        <li><span class="fig">3×</span> — Japanese students studying abroad more than tripled in the decade before the pandemic (about 36,000 to 115,000).</li>
-        <li><span class="fig">27%</span> — of scientific papers across OECD countries now carry a co-author abroad, up from 22% a decade earlier.</li>
-        <li><span class="fig">~93%</span> — of the world's indexed research is published in English.</li>
-      </ul>
-      <p class="src">Sources: MEXT/JASSO; OECD; Scopus.</p>
+      <div class="indexbox compact">
+        <p class="eyebrow">The world your students are entering</p>
+        <ul>
+          <li><span class="fig">3×</span> — Japanese students studying abroad in the decade before the pandemic (about 36,000 to 115,000).</li>
+          <li><span class="fig">27%</span> — of scientific papers across OECD countries have an international co-author, up from 22%.</li>
+          <li><span class="fig">~93%</span> — of the world's indexed research is published in English.</li>
+        </ul>
+        <p class="src">Sources: MEXT/JASSO; OECD; Scopus.</p>
+      </div>
     </div>
+
+    <aside class="coachingbox" aria-labelledby="coaching-heading">
+      <h2 id="coaching-heading">Your research is important. Can you explain why?</h2>
+      <p>Preparing a conference presentation, poster, or research interview?</p>
+      <p>I help graduate researchers explain their work clearly, communicate its significance, and respond confidently to questions—in English.</p>
+      <p>These videos and short essays clarify how we can work together.</p>
+      <p class="invite"><strong>Interested in individual coaching?</strong> <a href="mailto:acbaruch@gmail.com?subject=Individual%20research%20communication%20coaching">Contact me</a> to arrange a session.</p>
+    </aside>
   </div>
 
   <section id="essays" class="essays-grid"><p class="eyebrow">Essays</p>
@@ -191,11 +221,6 @@
     <div class="essay">
       <h3><a href="what-do-you-work-on.html">What Do You Work On?</a></h3>
       <p class="standfirst">The hardest part of a conference is often the coffee break. It may also be where the breakthroughs begin.</p>
-      <p class="meta">2 min read</p>
-    </div>
-    <div class="essay">
-      <h3><a href="ai-coaching.html">How AI Empowers Coaching</a></h3>
-      <p class="standfirst">They hand me the whole college catalog — medicine, biology, engineering, the lot. Here's how I can now walk into almost any field prepared.</p>
       <p class="meta">2 min read</p>
     </div>
   </section>
